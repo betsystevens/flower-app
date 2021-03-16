@@ -1,16 +1,9 @@
 import './App.css';
+import get from './getFlowers';
 
-const url = 'http://localhost/php-crud-api/api.php';
-fetch(url)
-  .then((response) => response.json())
-  .then((data) => {
-    console.log(data);
-  })
-  .catch(function(err) {
-    console.error(`error: ${err}`);
-    console.error(`oops, network error`);
-    console.error(`(it's not you, it's them)`);
-  });
+get('http://localhost/php-crud-api/api.php')
+  .then((flowers) => console.log(flowers))
+  .catch((err) => console.error(`error: ${err}`));
 
 function App() {
   return (
