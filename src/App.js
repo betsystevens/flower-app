@@ -1,7 +1,7 @@
 import './App.css';
 import get from './getFlowers';
 
-get('http://localhost/php-crud-api/api.php')
+get()
   .then((flowers) => console.log(flowers))
   .catch((err) => console.error(`error: ${err}`));
 
